@@ -17,12 +17,12 @@ header {
     justify-content: flex-start;
     align-items: center;
     flex-flow: row wrap;
-    gap: 25.05px;
-    margin-top: 67.5px;
+gap: 25.05px;
+margin-top: 67.5px;
 }
 
 header img {
-    width: auto;
+width: auto;
     height: 24.913px;
 }
 header ul {
@@ -52,5 +52,14 @@ header div {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+}
+@media screen and (max-width: 1200px) {
+    header {
+        gap: 15px;
+        margin-top: 45px;
+    }
+    header h1 {
+        font-size: 24px;
+    }
 }
 </style>

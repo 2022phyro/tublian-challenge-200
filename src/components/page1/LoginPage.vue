@@ -17,46 +17,49 @@ import MyHeader from '../MyHeader.vue';
 </template>
 <style scoped>
 section {
-    position: relative;
-    padding-left: 40px;
+position: relative;
+padding: 0 40px;
+display: flex;
+flex-flow: column;
+justify-content: flex-start;
 }
 h1 {
-    color: var(--base-900-dark, #FEFEFE);
-    margin-top: 40px;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 52px; /* 144.444% */
+color: var(--base-900-dark, #FEFEFE);
+margin-top: 40px;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 52px; /* 144.444% */
 }
 .slogan {
-    color: var(--base-800-dark, #CFCFCF);
-    margin-top: 14px;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px; /* 150% */
+color: var(--base-800-dark, #CFCFCF);
+margin-top: 14px;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
 }
 form {
-    margin-top: 28px;
+margin-top: 28px;
     display: flex;
-    flex-flow: column;
-    width: 405px;
-    gap: 28px;
+flex-flow: column;
+width: calc(405px - 40px);
+gap: 28px;
 }
 input {
-    outline: none;
-    color: white;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid var(--base-300-dark, #696969);
-    padding: 10px 10px;
+outline: none;
+color: white;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+background: transparent;
+border: none;
+border-bottom: 1px solid var(--base-300-dark, #696969);
+padding: 10px 10px;
 }
 input::placeholder {
-    color: var(--base-300-dark, #696969);
+color: var(--base-300-dark, #696969);
 }
 .submit {
     display: flex;
@@ -67,6 +70,7 @@ input::placeholder {
     font-size: 16px;
     font-weight: 500;
     gap: 8px;
+    border: none;
     border-radius: 30px;
     background: var(--primary-gold-300, #FDD649);
 }
@@ -74,15 +78,15 @@ input::placeholder {
     font-weight: 400;
     color: var(--base-800-dark, #CFCFCF);
     font-size: 16px;
-    font-style: normal;
+font-style: normal;
 }
 .rich-text-login {
-    margin-top: 28px;
+margin-top: 28px;
 }
 .rich-text-login a {
-    font-weight: 700;
-    color: white;
-    text-decoration: underline;
+font-weight: 700;
+color: white;
+text-decoration: underline;
 }
 .rich-text-login a:hover {
     background: var(--gradient_2, linear-gradient(109deg, #FBDA61 0%, rgba(255, 90, 205, 0.84) 86.08%));
@@ -91,9 +95,30 @@ input::placeholder {
     -webkit-text-fill-color: transparent;
 }
 .privacy {
-    display: flex;
+display: flex;
     gap: 20px;
     position: absolute;
     bottom: 48px;
+}
+@media screen and (max-width: 1200px) {
+h1 {
+    font-size: 24px;
+    margin-top: 28px;
+}
+.slogan {
+margin-top: 8px;
+}
+}
+@media screen and (max-width: 1000px) {
+    section {
+        padding: 0;
+        margin: auto;
+        height: 100%;
+        max-width: 405px;
+        width: calc(100% - 40px);
+    }
+    form, .submit {
+    width: 100%;
+    }
 }
 </style>
